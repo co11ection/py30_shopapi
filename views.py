@@ -13,7 +13,7 @@ def create_product(product: Product, db: Session = Depends(get_db)):
     db.refresh(db_product)
     return db_product
 
-@router.get("/product/", response_model=list[Product])
+@router.get("/products/", response_model=list[Product])
 def get_products(db: Session = Depends(get_db)):
     products = db.query(Products).all()
     return products
