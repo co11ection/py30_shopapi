@@ -3,7 +3,7 @@ from settings import Base
 from pydantic import BaseModel
 
 
-class Products(Base):
+class ProductModel(Base):
     __tablename__ = 'products'
     
     id = Column(Integer, primary_key=True, index=True)
@@ -12,7 +12,7 @@ class Products(Base):
     is_offer = Column(Boolean, default=False)
     
 
-class Product(BaseModel):
+class ProductSchemas(BaseModel):
     id: int
     title:  str
     price: float
