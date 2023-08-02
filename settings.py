@@ -1,10 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from decouple import config
 
-
+router = APIRouter()
 app = FastAPI()
 
 
